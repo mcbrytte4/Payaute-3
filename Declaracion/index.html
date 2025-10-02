@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Paya ute</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Imagen con link -->
+        <a href="e.png">
+            <img src="e.png" alt="Imagen bonita" width="200">
+        </a>
+
+        <!-- Título -->
+        <h1>¿Podemos ser pololos? :3</h1>
+
+        <!-- Botones -->
+        <div class="btn">
+            <a href="si.html">Chi vendamos frunta en lo buses</a>
+            <input type="button" id="btnNo" onmouseover="mueveElBoton()" value="Ño no tengo sencillo hijito">
+        </div>
+
+        <!-- Texto -->
+        <p>Te amo mi amor muak</p>
+    </div>
+
+    <!-- Script -->
+    <script>
+        function mueveElBoton(){
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+
+            const newWidth = (Math.random() * (width - 100)); // -100 para que no se salga
+            const newHeight = (Math.random() * (height - 50));
+
+            const btn = document.getElementById('btnNo');
+            btn.style.position = "absolute";
+            btn.style.left = newWidth + "px";
+            btn.style.top = newHeight + "px";
+        }
+    </script>
+</body>
+</html>
